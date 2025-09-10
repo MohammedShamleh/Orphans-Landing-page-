@@ -1,0 +1,995 @@
+/* Dark Mode Styles for Orphans Website */
+
+/* Dark Mode Variables */
+:root[data-theme="dark"] {
+    /* Enhanced Dark Theme Colors - Maintaining #818CF8 and #A5B4FC */
+    --primary: #818CF8;
+    /* Primary Brand Color */
+    --primary-light: #A5B4FC;
+    /* Light Primary Brand Color */
+    --primary-dark: #6366F1;
+    /* Darker Primary for contrast */
+    --primary-ultra-light: #C7D2FE;
+    /* Ultra light primary for dark mode */
+    --secondary: #22D3EE;
+    /* Lighter Cyan */
+    --secondary-light: #67E8F9;
+    /* Very light Cyan */
+    --secondary-dark: #06B6D4;
+    /* Standard Cyan */
+    --accent: #FBBF24;
+    /* Lighter Amber */
+    --accent-light: #FCD34D;
+    /* Very light Amber */
+    --accent-dark: #F59E0B;
+    /* Standard Amber */
+    --success: #34D399;
+    /* Lighter Emerald */
+    --warning: #FBBF24;
+    /* Lighter Amber */
+    --error: #F87171;
+    /* Lighter Red */
+    --purple: #A78BFA;
+    /* Lighter Violet */
+    --pink: #F472B6;
+    /* Lighter Pink */
+
+    /* Dark Neutrals */
+    --neutral-900: #F9FAFB;
+    /* Light text */
+    --neutral-800: #F3F4F6;
+    /* Very light text */
+    --neutral-700: #E5E7EB;
+    /* Light gray text */
+    --neutral-600: #D1D5DB;
+    /* Medium light gray */
+    --neutral-500: #9CA3AF;
+    /* Medium gray */
+    --neutral-400: #6B7280;
+    /* Dark medium gray */
+    --neutral-300: #374151;
+    /* Dark gray */
+    --neutral-200: #1F2937;
+    /* Very dark gray */
+    --neutral-100: #111827;
+    /* Near black */
+    --neutral-50: #0F172A;
+    /* Very dark background */
+    --white: #FFFFFF;
+    /* White text for dark mode */
+
+    /* Enhanced Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    --gradient-primary-soft: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-ultra-light) 100%);
+    --gradient-primary-bold: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, var(--primary-light) 100%);
+    --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--pink) 100%);
+    --gradient-rainbow: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 25%, var(--accent) 50%, var(--pink) 75%, var(--purple) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    --gradient-primary-glass: linear-gradient(135deg, rgba(129, 140, 248, 0.08) 0%, rgba(165, 180, 252, 0.05) 100%);
+
+    /* Enhanced Dark Shadows */
+    --shadow-colored: 0 10px 25px rgba(129, 140, 248, 0.3);
+    --shadow-primary-soft: 0 4px 15px rgba(129, 140, 248, 0.2);
+    --shadow-primary-medium: 0 8px 25px rgba(129, 140, 248, 0.25);
+    --glow: 0 0 20px rgba(129, 140, 248, 0.4);
+    --glow-strong: 0 0 40px rgba(129, 140, 248, 0.5);
+    --glow-soft: 0 0 15px rgba(165, 180, 252, 0.3);
+}
+
+/* Dark Mode Body */
+body[data-theme="dark"] {
+    background-color: var(--neutral-50);
+    color: var(--neutral-900);
+}
+
+/* Dark Mode Header */
+.header[data-theme="dark"] {
+    background: linear-gradient(135deg,
+            rgba(129, 140, 248, 0.05) 0%,
+            rgba(15, 23, 42, 0.8) 50%,
+            rgba(34, 211, 238, 0.05) 100%);
+    border-bottom: 1px solid rgba(129, 140, 248, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.header.scrolled[data-theme="dark"] {
+    background: rgba(15, 23, 42, 0.95);
+    border-bottom: 1px solid rgba(129, 140, 248, 0.3);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Dark Mode Navigation */
+.nav-link[data-theme="dark"] {
+    color: var(--neutral-700);
+    background: linear-gradient(135deg, rgba(129, 140, 248, 0.03) 0%, rgba(34, 211, 238, 0.03) 100%);
+    border: 1px solid rgba(129, 140, 248, 0.1);
+}
+
+.nav-link:hover[data-theme="dark"] {
+    color: var(--primary-light);
+    background: linear-gradient(135deg, rgba(129, 140, 248, 0.1) 0%, rgba(34, 211, 238, 0.1) 100%);
+    border-color: var(--primary-light);
+    box-shadow: 0 4px 15px rgba(129, 140, 248, 0.2);
+}
+
+/* Dark Mode Hero Section */
+.hero[data-theme="dark"] {
+    background:
+        linear-gradient(135deg,
+            rgba(15, 23, 42, 0.95) 0%,
+            rgba(31, 41, 55, 0.9) 25%,
+            rgba(55, 65, 81, 0.85) 50%,
+            rgba(31, 41, 55, 0.9) 75%,
+            rgba(15, 23, 42, 0.95) 100%),
+        radial-gradient(circle at 30% 70%, rgba(129, 140, 248, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(165, 180, 252, 0.03) 0%, transparent 50%),
+        url('Orphans-main.jpg');
+}
+
+.hero[data-theme="dark"] .hero-title {
+    color: var(--white) !important;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.hero[data-theme="dark"] .hero-subtitle {
+    color: var(--neutral-200) !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero::before[data-theme="dark"] {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(129, 140, 248, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(165, 180, 252, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(199, 210, 254, 0.04) 0%, transparent 70%),
+        linear-gradient(135deg,
+            rgba(0, 0, 0, 0.4) 0%,
+            rgba(0, 0, 0, 0.3) 25%,
+            rgba(0, 0, 0, 0.2) 50%,
+            rgba(0, 0, 0, 0.3) 75%,
+            rgba(0, 0, 0, 0.4) 100%);
+}
+
+/* Dark Mode Cards */
+.hero-card[data-theme="dark"] {
+    background: linear-gradient(145deg,
+            rgba(31, 41, 55, 0.98) 0%,
+            rgba(17, 24, 39, 0.95) 100%);
+    border: 2px solid rgba(129, 140, 248, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.hero-card:hover[data-theme="dark"] {
+    box-shadow: 0 15px 40px rgba(129, 140, 248, 0.3);
+    border-color: var(--primary-light);
+}
+
+.hero-card .card-title[data-theme="dark"] {
+    color: var(--white) !important;
+}
+
+.hero-card .card-description[data-theme="dark"] {
+    color: var(--neutral-300) !important;
+}
+
+.hero-card[data-theme="dark"] .stat-label {
+    color: var(--neutral-400) !important;
+}
+
+.hero-card[data-theme="dark"] .card-icon {
+    color: var(--white) !important;
+}
+
+/* Dark Mode Buttons */
+.btn-primary[data-theme="dark"] {
+    background: var(--gradient-primary);
+    border: 1px solid rgba(129, 140, 248, 0.3);
+    box-shadow: var(--shadow-colored);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary[data-theme="dark"]::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-primary-glass);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.btn-primary:hover[data-theme="dark"] {
+    background: var(--gradient-primary-bold);
+    box-shadow: var(--glow-strong), var(--shadow-xl);
+    border-color: var(--primary-ultra-light);
+}
+
+.btn-primary:hover[data-theme="dark"]::after {
+    opacity: 1;
+}
+
+.btn-secondary[data-theme="dark"] {
+    background: rgba(31, 41, 55, 0.9);
+    color: var(--primary-light);
+    border: 2px solid var(--primary);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-secondary[data-theme="dark"]::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-primary-glass);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.btn-secondary:hover[data-theme="dark"] {
+    background: var(--gradient-primary-soft);
+    color: var(--neutral-900);
+    border-color: var(--primary-light);
+}
+
+.btn-secondary:hover[data-theme="dark"]::after {
+    opacity: 1;
+}
+
+.card-button[data-theme="dark"] {
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-primary-soft);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-button[data-theme="dark"]::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-primary-glass);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.card-button:hover[data-theme="dark"] {
+    background: var(--gradient-primary-bold);
+    box-shadow: var(--glow-soft);
+}
+
+.card-button:hover[data-theme="dark"]::after {
+    opacity: 1;
+}
+
+/* Dark Mode Counters Section */
+.counters[data-theme="dark"] {
+    background: linear-gradient(180deg, var(--neutral-100) 0%, var(--neutral-50) 100%);
+}
+
+.counters[data-theme="dark"] .counters-header h2,
+body[data-theme="dark"] .counters-header h2,
+html[data-theme="dark"] .counters-header h2 {
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+.counters[data-theme="dark"] .counters-subtitle {
+    color: var(--neutral-400) !important;
+}
+
+/* Additional counters dark mode fixes */
+body[data-theme="dark"] .counters-header h2,
+html[data-theme="dark"] .counters-header h2 {
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+body[data-theme="dark"] .counters-subtitle,
+html[data-theme="dark"] .counters-subtitle {
+    color: #D1D5DB !important;
+}
+
+/* Force all headings in counters section to be visible in dark mode */
+.counters[data-theme="dark"] h1,
+.counters[data-theme="dark"] h2,
+.counters[data-theme="dark"] h3,
+.counters[data-theme="dark"] h4,
+.counters[data-theme="dark"] h5,
+.counters[data-theme="dark"] h6,
+body[data-theme="dark"] .counters h1,
+body[data-theme="dark"] .counters h2,
+body[data-theme="dark"] .counters h3,
+body[data-theme="dark"] .counters h4,
+body[data-theme="dark"] .counters h5,
+body[data-theme="dark"] .counters h6,
+html[data-theme="dark"] .counters h1,
+html[data-theme="dark"] .counters h2,
+html[data-theme="dark"] .counters h3,
+html[data-theme="dark"] .counters h4,
+html[data-theme="dark"] .counters h5,
+html[data-theme="dark"] .counters h6 {
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Extra strong rule for counters-header */
+[data-theme="dark"] .counters-header h2 {
+    color: white !important;
+}
+
+/* Most specific rule possible */
+body[data-theme="dark"] section.counters .counters-header h2 {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Ultimate fallback for counters heading visibility */
+*[data-theme="dark"] .counters-header h2,
+*[data-theme="dark"] .counters h2,
+.counters-header h2[style*="color"],
+body.dark-mode .counters-header h2,
+html.dark-mode .counters-header h2 {
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.counter-card[data-theme="dark"] {
+    background: linear-gradient(145deg, rgba(31, 41, 55, 0.9) 0%, rgba(17, 24, 39, 0.95) 100%);
+    border: 2px solid rgba(129, 140, 248, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.counter-card[data-theme="dark"]::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-primary-glass);
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.counter-card[data-theme="dark"]>* {
+    position: relative;
+    z-index: 1;
+}
+
+.counter-number[data-theme="dark"] {
+    color: var(--white) !important;
+}
+
+.counter-label[data-theme="dark"] {
+    color: var(--neutral-400) !important;
+}
+
+/* Dark Mode Steps Section */
+.steps[data-theme="dark"] {
+    background-color: var(--neutral-100);
+}
+
+.steps[data-theme="dark"] .section-header h2 {
+    color: var(--white) !important;
+}
+
+.steps[data-theme="dark"] .section-header p {
+    color: var(--neutral-400) !important;
+}
+
+.step-card[data-theme="dark"] {
+    background: linear-gradient(145deg, rgba(31, 41, 55, 0.9) 0%, rgba(17, 24, 39, 0.95) 100%);
+    border: 2px solid rgba(129, 140, 248, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.step-card[data-theme="dark"]::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-primary-glass);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.step-card[data-theme="dark"]>* {
+    position: relative;
+    z-index: 1;
+}
+
+.step-card:hover[data-theme="dark"] {
+    border-color: var(--primary-light);
+    box-shadow: 0 10px 30px rgba(129, 140, 248, 0.2), var(--glow-soft);
+}
+
+.step-card:hover[data-theme="dark"]::before {
+    opacity: 0.5;
+}
+
+.step-number[data-theme="dark"] {
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-primary-soft);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.step-card h3[data-theme="dark"] {
+    color: var(--white) !important;
+}
+
+.step-card p[data-theme="dark"] {
+    color: var(--neutral-400) !important;
+}
+
+.step-card[data-theme="dark"] .step-icon {
+    color: var(--primary-light) !important;
+}
+
+/* Dark Mode Motivation Section */
+.motivation[data-theme="dark"] {
+    background: linear-gradient(135deg, var(--neutral-200) 0%, var(--neutral-100) 50%, var(--neutral-200) 100%);
+}
+
+.motivation[data-theme="dark"] .hadith-icon {
+    color: var(--accent-light) !important;
+}
+
+.hadith-text h2[data-theme="dark"] {
+    color: var(--accent-light) !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hadith-text p[data-theme="dark"] {
+    color: var(--neutral-300) !important;
+}
+
+#hhh2 {
+    color: var(--neutral-900) !important;
+}
+
+.hadith-text cite[data-theme="dark"] {
+    color: var(--accent-light) !important;
+}
+
+.motivation-description p[data-theme="dark"] {
+    color: var(--neutral-300) !important;
+}
+
+/* Dark Mode CTA Section */
+.cta[data-theme="dark"] {
+    background: linear-gradient(135deg, var(--neutral-100) 0%, var(--neutral-50) 50%, var(--neutral-100) 100%);
+}
+
+.cta[data-theme="dark"] .cta-text h2 {
+    color: var(--white) !important;
+}
+
+.cta[data-theme="dark"] .cta-text p {
+    color: var(--neutral-400) !important;
+}
+
+.cta[data-theme="dark"] .feature span {
+    color: var(--neutral-300) !important;
+}
+
+/* Removed - handled above */
+
+.cta-form[data-theme="dark"] {
+    background: linear-gradient(145deg, rgba(31, 41, 55, 0.9) 0%, rgba(17, 24, 39, 0.95) 100%);
+    border: 1px solid rgba(129, 140, 248, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.sponsorship-options h3[data-theme="dark"] {
+    color: var(--neutral-800);
+}
+
+.option-card[data-theme="dark"] {
+    background: linear-gradient(145deg, rgba(55, 65, 81, 0.8) 0%, rgba(31, 41, 55, 0.9) 100%);
+    border: 2px solid rgba(129, 140, 248, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.option-card[data-theme="dark"]::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-primary-glass);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.option-card[data-theme="dark"]>* {
+    position: relative;
+    z-index: 1;
+}
+
+.option-card:hover[data-theme="dark"] {
+    border-color: var(--primary-light);
+    box-shadow: 0 8px 25px rgba(129, 140, 248, 0.3), var(--glow-soft);
+}
+
+.option-card:hover[data-theme="dark"]::before {
+    opacity: 0.3;
+}
+
+.option-card.selected[data-theme="dark"],
+.option-card.featured[data-theme="dark"] {
+    background: var(--gradient-primary);
+    border-color: var(--primary-light);
+    box-shadow: var(--shadow-primary-medium);
+}
+
+.option-card.selected[data-theme="dark"]::after,
+.option-card.featured[data-theme="dark"]::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-primary-glass);
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.option-amount[data-theme="dark"] {
+    color: var(--white) !important;
+}
+
+.option-label[data-theme="dark"] {
+    color: var(--neutral-300) !important;
+}
+
+.option-description[data-theme="dark"] {
+    color: var(--neutral-400) !important;
+}
+
+/* Dark Mode Contact Section */
+.contact[data-theme="dark"] {
+    background-color: var(--neutral-100);
+}
+
+.contact[data-theme="dark"] h2 {
+    color: var(--white) !important;
+}
+
+.contact[data-theme="dark"] p {
+    color: var(--neutral-400) !important;
+}
+
+/* Removed - handled above */
+
+.contact-method span[data-theme="dark"] {
+    color: var(--neutral-300) !important;
+}
+
+.contact-method a[data-theme="dark"] {
+    color: var(--primary-light) !important;
+}
+
+.social-links h3[data-theme="dark"] {
+    color: var(--white) !important;
+}
+
+/* Dark Mode Footer */
+.footer[data-theme="dark"] {
+    background-color: var(--neutral-200);
+}
+
+.footer[data-theme="dark"] h3,
+.footer[data-theme="dark"] h4 {
+    color: var(--white) !important;
+}
+
+.footer[data-theme="dark"] p {
+    color: var(--neutral-400) !important;
+}
+
+.footer[data-theme="dark"] a {
+    color: var(--neutral-400) !important;
+}
+
+.footer[data-theme="dark"] a:hover {
+    color: var(--primary-light) !important;
+}
+
+/* Removed - handled in main footer styles */
+
+/* Dark Mode Features */
+.feature i[data-theme="dark"] {
+    color: var(--primary-light) !important;
+}
+
+.feature span[data-theme="dark"] {
+    color: var(--neutral-300) !important;
+}
+
+/* Dark Mode Stats */
+.stat-number[data-theme="dark"] {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 100%) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.stat-label[data-theme="dark"] {
+    color: var(--neutral-400) !important;
+}
+
+/* Dark Mode Scroll Bars */
+::-webkit-scrollbar[data-theme="dark"] {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track[data-theme="dark"] {
+    background: var(--neutral-200);
+}
+
+::-webkit-scrollbar-thumb[data-theme="dark"] {
+    background: var(--primary);
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover[data-theme="dark"] {
+    background: var(--primary-light);
+}
+
+/* Dark Mode Selection */
+::selection[data-theme="dark"] {
+    background: var(--primary);
+    color: var(--neutral-900);
+}
+
+::-moz-selection[data-theme="dark"] {
+    background: var(--primary);
+    color: var(--neutral-900);
+}
+
+/* Dark Mode Focus States */
+button:focus[data-theme="dark"],
+input:focus[data-theme="dark"],
+a:focus[data-theme="dark"] {
+    outline: 2px solid var(--primary-light);
+    outline-offset: 2px;
+}
+
+/* Dark Mode Transitions */
+*[data-theme="dark"] {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    position: fixed !important;
+    bottom: 30px !important;
+    left: 30px !important;
+    background: linear-gradient(135deg, #818CF8 0%, #A5B4FC 100%) !important;
+    color: #ffffff !important;
+    border: 2px solid rgba(129, 140, 248, 0.5) !important;
+    border-radius: 50% !important;
+    width: 60px !important;
+    height: 60px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 24px !important;
+    cursor: pointer !important;
+    box-shadow: 0 8px 25px rgba(129, 140, 248, 0.3), 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+    z-index: 9999 !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    overflow: hidden;
+}
+
+.dark-mode-toggle::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-primary-glass);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.dark-mode-toggle>* {
+    position: relative;
+    z-index: 1;
+    color: #ffffff !important;
+}
+
+.dark-mode-toggle i {
+    color: #ffffff !important;
+    font-size: inherit;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: var(--glow), var(--shadow-xl);
+    border-color: var(--primary-light);
+}
+
+.dark-mode-toggle:hover::before {
+    opacity: 1;
+}
+
+/* Dark Mode Toggle Responsive */
+@media (max-width: 768px) {
+    .dark-mode-toggle {
+        bottom: 20px !important;
+        left: 20px !important;
+        width: 55px !important;
+        height: 55px !important;
+        font-size: 22px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .dark-mode-toggle {
+        bottom: 15px !important;
+        left: 15px !important;
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 20px !important;
+    }
+}
+
+/* Additional text color fixes */
+body[data-theme="dark"] h1,
+body[data-theme="dark"] h2,
+body[data-theme="dark"] h3,
+body[data-theme="dark"] h4,
+body[data-theme="dark"] h5,
+body[data-theme="dark"] h6 {
+    color: var(--white) !important;
+}
+
+body[data-theme="dark"] p {
+    color: var(--neutral-400) !important;
+}
+
+body[data-theme="dark"] span {
+    color: var(--neutral-400) !important;
+}
+
+/* New Hero Dark Mode Styles */
+.hero-background[data-theme=\"dark\"] {
+    opacity: 0.7;
+}
+
+.shape[data-theme=\"dark\"] {
+    background: var(--gradient-primary);
+    opacity: 0.05;
+}
+
+.floating-icon[data-theme=\"dark\"] {
+    color: var(--primary-light);
+    opacity: 0.4;
+}
+
+.hero-badge[data-theme=\"dark\"] {
+    background: rgba(31, 41, 55, 0.9);
+    color: var(--primary-light);
+    border-color: var(--primary);
+}
+
+.title-main[data-theme=\"dark\"] {
+    color: var(--neutral-400) !important;
+}
+
+.title-sub[data-theme=\"dark\"] {
+    color: var(--neutral-500) !important;
+}
+
+.hero-description[data-theme=\"dark\"] {
+    color: var(--neutral-300) !important;
+}
+
+.highlight-text[data-theme=\"dark\"] {
+    background: rgba(31, 41, 55, 0.8);
+    border-color: var(--primary);
+}
+
+.stat-item[data-theme=\"dark\"] {
+    background: rgba(31, 41, 55, 0.9);
+    border-color: rgba(129, 140, 248, 0.3);
+}
+
+.stat-item[data-theme=\"dark\"] .stat-label {
+    color: var(--neutral-400) !important;
+}
+
+.hero-main-card[data-theme=\"dark\"] {
+    background: linear-gradient(145deg, rgba(31, 41, 55, 0.95) 0%, rgba(17, 24, 39, 0.98) 100%);
+    border-color: rgba(129, 140, 248, 0.3);
+}
+
+.hero-main-card[data-theme=\"dark\"] .card-info h4 {
+    color: var(--white) !important;
+}
+
+.hero-main-card[data-theme=\"dark\"] .card-info p {
+    color: var(--neutral-400) !important;
+}
+
+.hero-main-card[data-theme=\"dark\"] .progress-info span:first-child {
+    color: var(--neutral-300) !important;
+}
+
+.progress-bar[data-theme=\"dark\"] {
+    background: var(--neutral-200);
+}
+
+.hero-main-card[data-theme=\"dark\"] .progress-amount {
+    color: var(--neutral-400) !important;
+}
+
+.info-btn[data-theme=\"dark\"] {
+    background: rgba(129, 140, 248, 0.1);
+    border-color: var(--primary);
+    color: var(--primary-light);
+}
+
+.info-btn:hover[data-theme=\"dark\"] {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.mini-card[data-theme=\"dark\"] {
+    background: rgba(31, 41, 55, 0.9);
+    border-color: var(--primary);
+    color: var(--primary-light);
+}
+
+/* Enhanced Motivation Dark Mode */
+.motivation[data-theme=\"dark\"] {
+    background: linear-gradient(135deg, var(--neutral-200) 0%, var(--neutral-100) 100%);
+}
+
+.motivation-badge[data-theme=\"dark\"] {
+    background: rgba(31, 41, 55, 0.9);
+    border-color: var(--primary);
+    color: var(--primary-light);
+}
+
+.section-title h2[data-theme=\"dark\"] {
+    color: var(--white) !important;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.title-decoration .decoration-line[data-theme=\"dark\"] {
+    background: var(--gradient-primary-glass);
+}
+
+.hadith-card[data-theme=\"dark\"] {
+    background: linear-gradient(145deg, rgba(31, 41, 55, 0.95), rgba(17, 24, 39, 0.98));
+    border-color: rgba(129, 140, 248, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    padding: var(--spacing-2xl);
+}
+
+.hadith-quote-icon[data-theme=\"dark\"] {
+    color: var(--accent-light) !important;
+}
+
+.hadith-main h3[data-theme=\"dark\"] {
+    color: var(--white) !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hadith-description[data-theme=\"dark\"] {
+    color: var(--neutral-300) !important;
+}
+
+.hadith-source[data-theme=\"dark\"] {
+    background: rgba(55, 65, 81, 0.8);
+}
+
+.source-icon[data-theme=\"dark\"] {
+    color: var(--accent-light) !important;
+}
+
+.hadith-source cite[data-theme=\"dark\"] {
+    color: var(--white) !important;
+}
+
+.feature-card[data-theme=\"dark\"] {
+    background: linear-gradient(145deg, rgba(31, 41, 55, 0.9), rgba(17, 24, 39, 0.95));
+    border-color: rgba(129, 140, 248, 0.2);
+}
+
+.feature-card[data-theme=\"dark\"]:hover {
+    border-color: var(--primary-light);
+    box-shadow: 0 15px 40px rgba(129, 140, 248, 0.2);
+}
+
+.feature-icon[data-theme=\"dark\"] {
+    background: rgba(31, 41, 55, 0.8);
+    border-color: var(--primary);
+    color: var(--primary-light) !important;
+}
+
+.feature-card[data-theme=\"dark\"]:hover .feature-icon {
+    box-shadow: 0 12px 35px rgba(129, 140, 248, 0.3);
+}
+
+.feature-content h4[data-theme=\"dark\"] {
+    color: var(--white) !important;
+}
+
+.feature-content p[data-theme=\"dark\"] {
+    color: var(--neutral-400) !important;
+}
+
+.motivation-message[data-theme=\"dark\"] {
+    color: var(--neutral-300) !important;
+}
+
+.highlight-word[data-theme=\"dark\"] {
+    background: rgba(31, 41, 55, 0.8);
+    border-color: var(--primary);
+    color: var(--primary-light) !important;
+}
+
+/* Hero Dark Mode Responsive */
+@media (max-width: 768px) {
+    .hero[data-theme="dark"] {
+        padding: calc(60px + var(--spacing-lg)) 0 var(--spacing-lg);
+    }
+
+    .hero-main-card[data-theme="dark"] {
+        padding: var(--spacing-lg);
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero[data-theme="dark"] {
+        padding: calc(55px + var(--spacing-md)) 0 var(--spacing-md);
+        min-height: 75vh;
+    }
+
+    .hero-badge[data-theme="dark"] {
+        font-size: 11px;
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    .hero-main-card[data-theme="dark"] {
+        padding: var(--spacing-md);
+        max-width: 280px;
+    }
+
+    .card-avatar[data-theme="dark"] {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+
+/* Final Dark Mode Text Visibility Rules */
+[data-theme="dark"] section h1,
+[data-theme="dark"] section h2,
+[data-theme="dark"] section h3,
+[data-theme="dark"] .section-header h2,
+[data-theme="dark"] .counters-header h2 {
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Dark Mode Media Queries */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* User prefers dark theme - handled by JavaScript */
+        color-scheme: dark;
+    }
+}

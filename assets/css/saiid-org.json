@@ -1,0 +1,301 @@
+{
+  "meta": {
+    "id": "ab21e4a3-6c58-4072-98bd-81a1a8171613",
+    "version": "1.0.0",
+    "created_at": "2025-09-05T17:19:01.138449Z",
+    "source": "saiid.org",
+    "notes": "Structure assembled from publicly visible pages; colors approximated/TBD."
+  },
+  "brand": {
+    "name_ar": "جمعية ساعد للتنمية البشرية",
+    "name_en": "Saed Association for Human Development",
+    "mission_ar": "دائرة متخصصة في صناعة قادة المستقبل من خلال تربية الشباب علميًا وعمليًا وتدريبهم على مهارات القيادة والإدارة ليكونوا قادة نافعين لمجتمعاتهم.",
+    "slogan_ar": "نصنع قادةً نافعين لمجتمعاتهم"
+  },
+  "contact": {
+    "email": "info@saiid.org",
+    "phone": "+972567697164",
+    "address_ar": "فلسطين - غزة - خانيونس",
+    "site": "https://saiid.org",
+    "social": {
+      "facebook": "https://www.facebook.com/saaedgaza/",
+      "youtube": "https://www.youtube.com/",
+      "x": "https://twitter.com/",
+      "instagram": "https://www.instagram.com/"
+    }
+  },
+  "tokens": {
+    "colors": {
+      "_note": "True brand colors were not programmatically scraped; set these to your official palette.",
+      "primary": "#2E7D32",
+      "primary_light": "#60AD5E",
+      "primary_dark": "#1B5E20",
+      "accent": "#FFC107",
+      "neutral_900": "#111827",
+      "neutral_700": "#374151",
+      "neutral_500": "#6B7280",
+      "neutral_200": "#E5E7EB",
+      "neutral_50": "#F9FAFB",
+      "white": "#FFFFFF"
+    },
+    "typography": {
+      "font_family_ar": "Tajawal, Cairo, system-ui, -apple-system, Segoe UI, Roboto, Arial, 'Noto Kufi Arabic'",
+      "font_family_en": "Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial",
+      "scale": {
+        "display": {
+          "size": 48,
+          "line_height": 56,
+          "weight": 800
+        },
+        "h1": {
+          "size": 36,
+          "line_height": 44,
+          "weight": 800
+        },
+        "h2": {
+          "size": 30,
+          "line_height": 38,
+          "weight": 700
+        },
+        "h3": {
+          "size": 24,
+          "line_height": 32,
+          "weight": 700
+        },
+        "body": {
+          "size": 16,
+          "line_height": 26,
+          "weight": 400
+        },
+        "caption": {
+          "size": 13,
+          "line_height": 18,
+          "weight": 500
+        }
+      }
+    },
+    "spacing": {
+      "unit_px": 4
+    }
+  },
+  "i18n": {
+    "default": "ar",
+    "languages": [
+      "ar"
+    ]
+  },
+  "navigation": {
+    "header": [
+      {
+        "key": "home",
+        "path": "/"
+      },
+      {
+        "key": "news",
+        "path": "/news"
+      },
+      {
+        "key": "circles",
+        "path": "/circles"
+      },
+      {
+        "key": "completions",
+        "path": "/completions"
+      },
+      {
+        "key": "directors",
+        "path": "/directors"
+      },
+      {
+        "key": "general_assembly",
+        "path": "/general_assembly"
+      },
+      {
+        "key": "donate",
+        "path": "/donate"
+      },
+      {
+        "key": "contact_us",
+        "path": "/contact_us"
+      }
+    ],
+    "cta": {
+      "donate_label_ar": "تبرع الآن",
+      "donate_path": "/donate"
+    }
+  },
+  "pages": {
+    "home": {
+      "hero": {
+        "title_ar": "ساعد للتنمية البشرية",
+        "subtitle_ar": "نرتقي بالشباب علميًا وعمليًا ونبني قادة المستقبل",
+        "primary_cta": {
+          "label_ar": "تبرع الآن",
+          "to": "/donate"
+        },
+        "secondary_cta": {
+          "label_ar": "آخر الأخبار",
+          "to": "/news"
+        }
+      },
+      "highlights": [
+        {
+          "title_ar": "دوائر العمل",
+          "to": "/circles"
+        },
+        {
+          "title_ar": "إنجازاتنا",
+          "to": "/completions"
+        },
+        {
+          "title_ar": "مجلس الإدارة",
+          "to": "/directors"
+        }
+      ]
+    },
+    "news": {
+      "path": "/news",
+      "template": "list",
+      "example_item": {
+        "title_ar": "700 سلة خضار للنازحين في المواصي",
+        "summary_ar": "ضمن الجهود الإغاثية للتخفيف من معاناة الأسر.",
+        "published_at": "2024-06-21",
+        "tags": [
+          "إغاثة",
+          "غزة"
+        ],
+        "cover_image": "assets/news/placeholder.jpg"
+      }
+    },
+    "circles": {
+      "path": "/circles",
+      "blocks": [
+        {
+          "title_ar": "الدائرة الاجتماعية",
+          "body_ar": "تقديم الخدمات الاجتماعية والإعانات للفقراء والمحتاجين."
+        }
+      ]
+    },
+    "completions": {
+      "path": "/completions",
+      "template": "cards",
+      "items_example": [
+        {
+          "title_ar": "الحصاد الشهري لـ أكتوبر 2024",
+          "file": "files/oct-2024.pdf"
+        },
+        {
+          "title_ar": "إحصائيات عام من الإغاثة في غزة",
+          "file": "files/gaza-relief-year.pdf"
+        },
+        {
+          "title_ar": "الحصاد الشهري لـ سبتمبر 2024",
+          "file": "files/sep-2024.pdf"
+        },
+        {
+          "title_ar": "إحصائية كفالة الأيتام لدى ساعد",
+          "file": "files/orphans-stats.pdf"
+        }
+      ]
+    },
+    "directors": {
+      "path": "/directors",
+      "template": "people",
+      "fields": [
+        "name_ar",
+        "role_ar",
+        "period"
+      ],
+      "actions": [
+        {
+          "label_ar": "العودة للصفحة الرئيسية",
+          "to": "/"
+        }
+      ]
+    },
+    "general_assembly": {
+      "path": "/general_assembly",
+      "template": "table",
+      "columns": [
+        "name_ar",
+        "id_number",
+        "education_ar"
+      ]
+    },
+    "donate": {
+      "path": "/donate",
+      "widgets": [
+        {
+          "type": "newsletter",
+          "title_ar": "اشترك في القائمة البريدية لدينا ليصلك كل جديد."
+        }
+      ]
+    },
+    "contact_us": {
+      "path": "/contact_us",
+      "intro_ar": "مرحبًا بك، يمكنك التواصل معنا في أي وقت وسنكون سعداء بخدمتك.",
+      "channels": [
+        {
+          "type": "email",
+          "value": "info@saiid.org"
+        },
+        {
+          "type": "phone",
+          "value": "+972567697164"
+        }
+      ]
+    }
+  },
+  "footer": {
+    "columns": [
+      {
+        "title_ar": "عن الجمعية",
+        "links": [
+          {
+            "label_ar": "الجمعية العمومية",
+            "to": "/general_assembly"
+          },
+          {
+            "label_ar": "مجلس الإدارة",
+            "to": "/directors"
+          },
+          {
+            "label_ar": "الرؤية والرسالة",
+            "to": "/about"
+          }
+        ]
+      },
+      {
+        "title_ar": "روابط مهمة",
+        "links": [
+          {
+            "label_ar": "الأدلة والأنظمة",
+            "to": "/guides"
+          },
+          {
+            "label_ar": "التقارير",
+            "to": "/completions"
+          },
+          {
+            "label_ar": "الأخبار",
+            "to": "/news"
+          }
+        ]
+      },
+      {
+        "title_ar": "تواصل",
+        "links": [
+          {
+            "label_ar": "اتصل بنا",
+            "to": "/contact_us"
+          },
+          {
+            "label_ar": "تبرع الآن",
+            "to": "/donate"
+          }
+        ]
+      }
+    ],
+    "copyright_ar": "© جميع الحقوق محفوظة لجمعية ساعد للتنمية البشرية"
+  }
+}
